@@ -38,12 +38,8 @@ publishing {
 }
 
 dependencies {
-	implementation("org.springframework:spring-messaging:6.0.6")
+	implementation("org.springframework:spring-messaging:6.0.9")
 	implementation("org.apache.avro:avro:1.11.2")
-}
-
-tasks.withType<Test> {
-	useJUnitPlatform()
 }
 
 tasks.withType<Jar> {
