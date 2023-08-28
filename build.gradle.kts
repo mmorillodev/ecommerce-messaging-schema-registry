@@ -45,3 +45,9 @@ dependencies {
 tasks.withType<Jar> {
 	archiveBaseName.set("ecommerce-messaging-schema-registry")
 }
+
+tasks.named<Copy>("processResources") {
+	from("src/main/avro") {
+		include("**/*.asvc")
+	}
+}
