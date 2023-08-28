@@ -1,0 +1,37 @@
+{
+  "fields": [
+    {
+      "name": "customerId",
+      "type": "string"
+    },
+    {
+      "name": "couponId",
+      "type": "string"
+    },
+    {
+      "name": "shippingCost",
+      "type": {
+        "type": "bytes",
+        "logicalType": "decimal",
+        "precision": 4,
+        "scale": 2
+      }
+    },
+    {
+      "name": "items",
+      "type": {
+        "type": "record",
+        "name": "OrderItem",
+        "fields": [
+          {
+            "name": "productId",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ],
+  "name": "PlaceOrder",
+  "namespace": "com.matheus.ecommercemessagingschemaregistry",
+  "type": "record"
+}
